@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Feedback from "./Feedback/Feedback";
 import Options from "./Options/Options";
 import Notification from "./Notification";
+import Description from "./Description/Description";
 
 const getInitialFeedback = () => {
   const savedFeedback = localStorage.getItem("feedback");
@@ -37,11 +38,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>Sip Happens Café</h1>
-      <h2>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </h2>
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         resetFeedback={resetFeedback}
